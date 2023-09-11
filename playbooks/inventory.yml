@@ -1,6 +1,6 @@
 all:
   hosts:
-    kube-node0[1:4]:
+    sewon-node0[1:4]:
       ansible_user: root
       ansible_ssh_private_key_file: ~/mz_keys/mz_kisti.pem
   children:
@@ -8,15 +8,15 @@ all:
       children:
         control-plain:
           hosts:
-            kube-node01:
-            kube-node02:
-            kube-node03:
+            sewon-node01:
+            sewon-node02:
+            sewon-node03:
           vars:
             ansible_user: root
             ansible_ssh_private_key_file: ~/mz_keys/mz_kisti.pem
         worker:
           hosts:
-            kube-node04:
+            sewon-node04:
           vars:
             ansible_user: root
             ansible_ssh_private_key_file: ~/mz_keys/mz_kisti.pem

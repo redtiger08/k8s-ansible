@@ -1,9 +1,9 @@
 - name: Install OpenStack packages
   hosts: 
-    - kube-node01
-    - kube-node02
-    - kube-node03
-    - kube-node04
+    - sewon-node01
+    - sewon-node02
+    - sewon-node03
+    - sewon-node04
 
   tasks:
     - name: Install vim

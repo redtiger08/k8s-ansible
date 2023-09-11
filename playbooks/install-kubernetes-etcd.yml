@@ -1,7 +1,7 @@
 ---
 - name: Install kubernetes in etcd
   hosts:
-    - kube-node01
+    - sewon-node01
   environment:
     KKZONE: kr
 

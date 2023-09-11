@@ -1,17 +1,17 @@
 ---
 - name: add_hosts
   hosts: 
-    - kube-node01
-    - kube-node02
-    - kube-node03
-    - kube-node04
+    - sewon-node01
+    - sewon-node02
+    - sewon-node03
+    - sewon-node04
 
   tasks:
     - name: Add hosts file
       blockinfile:
           path: /etc/hosts
           block: |
-             192.168.122.52 kubec-node01
-             192.168.122.53 kubec-node02
-             192.168.122.54 kubec-node03
-             192.168.122.55 kubec-node04
+             192.168.122.56 sewon-node01
+             192.168.122.57 sewon-node02
+             192.168.122.58 sewon-node03
+             192.168.122.59 sewon-node04

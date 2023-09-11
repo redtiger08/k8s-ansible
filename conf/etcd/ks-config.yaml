@@ -4,22 +4,22 @@ metadata:
   name: sample
 spec:
   hosts:
-  - {name: kube-node01, address: 192.168.122.52, internalAddress: 192.168.122.52, user: root, password: "1111"}
-  - {name: kube-node02, address: 192.168.122.53, internalAddress: 192.168.122.53, user: root, password: "1111"}
-  - {name: kube-node03, address: 192.168.122.54, internalAddress: 192.168.122.54, user: root, password: "1111"}
-  - {name: kube-node04, address: 192.168.122.55, internalAddress: 192.168.122.55, user: root, password: "1111"}
+  - {name: sewon-node01, address: 192.168.122.56, internalAddress: 192.168.122.56, user: root, password: "MZ-P@ssw0rd"}
+  - {name: sewon-node02, address: 192.168.122.57, internalAddress: 192.168.122.57, user: root, password: "MZ-P@ssw0rd"}
+  - {name: sewon-node03, address: 192.168.122.58, internalAddress: 192.168.122.58, user: root, password: "MZ-P@ssw0rd"}
+  - {name: sewon-node04, address: 192.168.122.59, internalAddress: 192.168.122.59, user: root, password: "MZ-P@ssw0rd"}
 
   roleGroups:
     etcd:
-    - kube-node01
-    - kube-node02
-    - kube-node03
+    - sewon-node01
+    - sewon-node01
+    - sewon-node03
     control-plane:
-    - kube-node01
-    - kube-node02
-    - kube-node03
+    - sewon-node01
+    - sewon-node02
+    - sewon-node03
     worker:
-    - kube-node04
+    - sewon-node04
   controlPlaneEndpoint:
     ## Internal loadbalancer for apiservers
     # internalLoadbalancer: haproxy
