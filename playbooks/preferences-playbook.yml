@@ -57,6 +57,7 @@
 
     - name: selinux off
       command: setenforce 0
+      ignore_errors: yes
  
 
     - name: Install socat

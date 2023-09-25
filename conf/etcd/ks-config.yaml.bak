@@ -26,7 +26,7 @@ spec:
     address: 192.168.122.57
     port: 6443
   kubernetes:
-    version: v1.24.14
+    version: v1.21.1
     clusterName: cluster.local
     autoRenewCerts: true
     containerManager: docker
@@ -52,7 +52,7 @@ metadata:
   name: ks-installer
   namespace: kubesphere-system
   labels:
-    version: v3.3.2
+    version: v3.3.0
 spec:
   persistence:
     storageClass: ""

@@ -1,7 +1,7 @@
 ---
 - name: Install kubernetes in etcd
   hosts:
-    - sewon-node01
+    - sewon-node02
   environment:
     KKZONE: kr
 
@@ -14,17 +14,17 @@
     
     - name: Copy kubernetes config file 
       copy:
-        src: ~/ansible/test-ansible/conf/etcd/ks-config.yaml
+        src: /app/ansible/k8s-ansible/conf/etcd/ks-config.yaml
         dest: ~/deploy/kubernetes/ks-config.yaml
 
     - name: Copy kk 
       copy:
-        src: ~/ansible/test-ansible/conf/etcd/kk
+        src: /app/ansible/k8s-ansible/conf/etcd/kk
         dest: ~/deploy/kubernetes/kk
 
     - name: Copy kubekey
       copy:
-        src: ~/ansible/test-ansible/conf/etcd/kubekey-v3.0.7-linux-amd64.tar.gz
+        src: /app/ansible/k8s-ansible/conf/etcd/kubekey-v3.0.7-linux-amd64.tar.gz
         dest: ~/deploy/kubernetes/kubekey-v3.0.7-linux-amd64.tar.gz
 
 
@@ -33,7 +33,7 @@
       shell: chmod +x ~/deploy/kubernetes/kk
   
     - name: install kubernetes
-      command: ~/deploy/kubernetes/kk create cluster --with-kubernetes v1.23.10 --with-kubesphere v3.3.0 -f ~/deploy/kubernetes/ks-config.yaml -y
+      command: ~/deploy/kubernetes/kk create cluster --with-kubernetes v1.24.14 --with-kubesphere v3.3.2 -f ~/deploy/kubernetes/ks-config.yaml -y
 
 
 
